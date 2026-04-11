@@ -150,7 +150,6 @@
   #header & {
     margin-top: math.floor((variables.$header-title-line-height + variables.$header-padding-vertical * 2 - variables.$input-height-base) * .5) - 1px;
     margin-right: variables.$header-padding-horizontal;
-    margin-bottom: variables.$padding-large-vertical;
     float: right;
     color: variables.$header-text;
   }
