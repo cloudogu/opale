@@ -10,6 +10,16 @@
       background-color: variables.$brand-primary !important; // stylelint-disable-line declaration-no-important
       color: variables.$brand-text !important; // stylelint-disable-line declaration-no-important
     }
+
+    > td.short_description > div.wiki {
+      color: variables.$brand-text;
+
+      @each $markdown-alert, $markdown-alert-color in variables.$markdown-alerts-map {
+        .markdown-alert-#{$markdown-alert} .markdown-alert-title {
+          color: variables.$brand-text;
+        }
+      }
+    }
   }
 
   #context-menu {
