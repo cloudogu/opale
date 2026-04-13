@@ -33,7 +33,7 @@ table.list {
     border: 2px solid variables.$table-border-color;
     border-width: variables.$table-list-header-border;
     background-color: variables.$table-list-header-bg;
-    color: variables.$gray-700;
+    color: variables.$gray-750;
     vertical-align: bottom;
 
     @if variables.$table-list-header-bg == variables.$body-bg {
@@ -647,10 +647,10 @@ tr.wiki-page-version {
 
 tr.version {
   &.closed {
-    color: variables.$gray-700;
+    color: variables.$gray-750;
 
     a {
-      color: variables.$gray-700;
+      color: variables.$gray-750;
     }
   }
 
@@ -812,7 +812,7 @@ table.list.enumerations {
 
   span.description {
     display: block;
-    color: variables.$gray-700;
+    color: variables.$gray-750;
     font-style: italic;
   }
 }
@@ -845,7 +845,7 @@ table.list.enumerations {
     }
 
     .time {
-      color: variables.$gray-700;
+      color: variables.$gray-750;
     }
 
     @if variables.$use-gravatars {

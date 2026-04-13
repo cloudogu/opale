@@ -15,7 +15,7 @@
   margin-bottom: variables.$line-height-computed;
   padding: variables.$padding-large-vertical variables.$padding-large-horizontal;
   padding-left: variables.$padding-large-horizontal + 8px + 16px;
-  border: 1px solid;
+  border: 1px solid variables.$flash-warning-border;
   border-radius: variables.$border-radius-large;
   background-repeat: no-repeat;
   background-position: variables.$padding-large-horizontal 50%;

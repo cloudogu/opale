@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:map";
 @use "../variables";
 @use "../vendor/font-awesome/variables" as fa-variables;
 @use "../mixins/shadows";
@@ -8,8 +9,28 @@
   .context-menu-selection {
     &,
     > td {
-      background-color: variables.$brand-primary !important; // stylelint-disable-line declaration-no-important
-      color: variables.$brand-text !important; // stylelint-disable-line declaration-no-important
+      background-color: variables.$component-active-bg !important;
+      color: variables.$component-active-color !important;
+    }
+
+    a,
+    a:hover {
+      color: variables.$component-active-color !important;
+    }
+
+    @if variables.$color-trackers {
+      @each $tracker-id, $tracker-colors in variables.$tracker-colors-map {
+        &.issue.tracker-#{$tracker-id} .id {
+          a,
+          a:hover {
+            color: map.get($tracker-colors, color) !important;
+          }
+        }
+      }
+    }
+
+    svg.icon-svg {
+      stroke: variables.$component-active-color !important;
     }
 
     > td.short_description > div.wiki {
@@ -22,7 +43,7 @@
     > ul > li > ul {
       @include shadows.nice-shadow(2);
 
-      border: 0 none !important; // stylelint-disable-line declaration-no-important
+      border: 0 none !important;
     }
 
     ul {
@@ -56,8 +77,9 @@
         background-color: variables.$pagination-hover-bg;
       }
 
-      &.disabled {
-        color: color.adjust(variables.$pagination-color, $alpha: -.5);
+      &.disabled,
+      &.disabled:hover {
+        color: variables.$gray-750;
       }
 
       &.icon-checked {
