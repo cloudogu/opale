@@ -76,6 +76,10 @@ table.list {
     &.attachments a {
       display: block;
     }
+
+    &.short_description {
+      text-align: left;
+    }
   }
 
   th,
