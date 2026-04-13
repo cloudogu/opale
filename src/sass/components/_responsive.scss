@@ -163,6 +163,10 @@ body {
           padding-left: variables.$padding-large-horizontal;
         }
 
+        #sidebar-wrapper {
+          margin-left: 0;
+        }
+
         div.wiki {
           margin-bottom: variables.$padding-large-vertical;
           color: variables.$flyout-menu-text;
@@ -231,6 +235,10 @@ body {
           li {
             display: flex;
 
+            &:first-child {
+              border-top: none;
+            }
+
             a {
               flex: 1 1 auto;
             }
@@ -254,7 +262,8 @@ body {
       a {
         &,
         &:hover,
-        &:focus {
+        &:focus,
+        .icon {
           color: variables.$flyout-menu-link;
 
           &::before,
@@ -342,6 +351,7 @@ body {
           li {
             margin: (variables.$line-height-computed * .5) 0 0;
             padding: 0;
+            border-top: none;
 
             img.gravatar {
               top: 0;
