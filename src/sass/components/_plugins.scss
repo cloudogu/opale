@@ -17,10 +17,26 @@
   }
 }
 
-.flyout-menu .dashboard-system-default {
-  position: absolute;
-  right: 10px;
-  transform: translateY(-190%);
+@media screen and (max-width: variables.$redmine-responsive-max) {
+  .flyout-menu {
+    .dashboard-system-default {
+      position: absolute;
+      right: 10px;
+      transform: translateY(-190%);
+    }
+  }
+
+  .flyout-is-active .flyout-menu {
+    #admin-menu li {
+      a.additionals {
+        padding-left: 38px !important;
+
+        &::before {
+          margin-right: calc(variables.$padding-large-horizontal / 2);
+        }
+      }
+    }
+  }
 }
 
 #sidebar .sidebar-additionals {

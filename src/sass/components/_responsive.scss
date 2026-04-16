@@ -322,17 +322,9 @@ body {
         }
       }
 
-      #admin-menu {
-        a {
-          background-position: 8px center !important; // stylelint-disable-line declaration-no-important
-
-          &.additionals {
-            padding-left: 32px !important; // stylelint-disable-line declaration-no-important
-
-            &::before {
-              margin-right: variables.$padding-small-vertical;
-            }
-          }
+      #admin-menu li {
+        & > a {
+          padding-left: 38px !important;
         }
       }
 
