@@ -1,4 +1,21 @@
-# Opale Redmine Theme
+# Opale Cloudogu Redmine Theme
+
+This repository contains the theme used in the cloudogu redmine dogu.
+
+:warning: To enhance the upgrade compatibility please do not modify the source of the base theme. Basic changes can be made in `_custom-variables.scss`.
+
+## Development
+`docker run -d --name rm-theme -p3000:3000 -v $REPOSITORY_SOURCE:/usr/src/redmine/public/themes redmine:6.1.1`
+
+`npm install`
+
+`npm run watch`
+
+## Build / CSS Generierung
+
+`npm run build`
+
+## Further details about Opale
 
 A Redmine 6.x theme.
 
@@ -9,7 +26,6 @@ A Redmine 6.x theme.
 
 ---
 
-![Screenshot](./screenshots/issues.png)
 
 ## Main features
 
@@ -22,20 +38,6 @@ A Redmine 6.x theme.
 
 * **Redmine 6.x** : use either the latest stable release ([1.6.7](https://github.com/gagnieray/opale/archive/refs/tags/1.6.7.zip)), or use the `redmine-6.x` branch of this repository.
 * **Redmine 5.x** : use either the latest stable release ([1.5.5](https://github.com/gagnieray/opale/archive/refs/tags/1.5.5.zip)), or use the `redmine-5.x` branch of this repository.
-
-## Install
-
-To install this theme :
-
-1. [download the lastest stable release](https://github.com/gagnieray/opale/archive/refs/tags/1.6.7.zip) and decompress the archive to your Redmine's `themes` folder,
-2. rename the folder `opale-1.6.7` to `opale`,
-3. go to `Redmine > Administration > Settings > Display`, select `Opale` from the theme's list and save the settings.
-
-## Customize
-
-If you wish to customize this theme to your needs, it is recommended that you use [Custom Opale Redmine Theme Builder](https://github.com/gagnieray/custom-opale-builder).
-
-You will be able to override the Sass variables defined in `src/sass/_variables.scss` with the `!default` flag, add a logo and/or a favicon, and eventually add any custom Sass style rules you want.
 
 ## Troubleshooting
 
