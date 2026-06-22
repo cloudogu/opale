@@ -67,23 +67,23 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
 
   $status-custom-colors-map: (
     status-1: (
-      background: shade($custom-brand-primary, 500),
+      background: color.scale($custom-brand-primary, $lightness: -10%),
       color: $custom-white
     ),
     status-2: (
-      background: shade($custom-brand-primary, 500),
+      background: color.scale($custom-brand-primary, $lightness: -10%),
       color: $custom-white
     ),
     status-3: (
-      background: shade($custom-brand-primary, 500),
+      background: color.scale($custom-brand-primary, $lightness: -10%),
       color: $custom-white
     ),
     status-4: (
-      background: shade($custom-brand-primary, 500),
+      background: color.scale($custom-brand-primary, $lightness: -10%),
       color: $custom-white
     ),
     closed: (
-      background: shade($custom-brand-danger, 500),
+      background: color.scale($custom-brand-danger, $lightness: -10%),
       color: $custom-white
     )
   )
