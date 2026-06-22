@@ -89,5 +89,17 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
   )
 );
 
+
+// CUSTOM
+
+// Checkbox whitespace in project selection
+
+.drdn-items.selection>span::before {
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  margin-right: 4px;
+}
+
 // style open and closed swimlanes in some Agile plugin views
 // tr.group.swimlane a.issue { color: white; }
