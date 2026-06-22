@@ -106,6 +106,13 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
 
 // CUSTOM
 
+// Lighter color for tracker marker ('#') in list view
+
+tr.tracker-2 .id>a::before,
+tr.tracker-4 .id>a::before {
+  color: color.mix($custom-white, color.scale($custom-brand-primary, $lightness: -10%), 35%);
+}
+
 // Checkbox whitespace in project selection
 
 .drdn-items.selection>a span::before {
