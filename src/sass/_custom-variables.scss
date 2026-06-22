@@ -6,6 +6,7 @@ $custom-brand-info: #409ae3;
 $custom-brand-success: #019851;
 $custom-brand-warning: #ed820c;
 $custom-brand-danger: #e74c3c;
+$custom-brand-teal: #00b3ad;
 $custom-white: #fff;
 $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
 
@@ -32,7 +33,7 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
   $orange: $custom-brand-warning,
   $yellow: #fec900,
   $green: $custom-brand-success,
-  $teal: #00b3ad,
+  $teal: $custom-brand-teal,
   $white: $custom-white,
 
 
@@ -92,12 +93,32 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
   // Trackers links
 
   $tracker-custom-colors-map: (
+    1: (
+      background: color.scale($custom-brand-danger, $lightness: -10%),
+      color: $custom-white
+    ),
     2: (
       background: color.scale($custom-brand-primary, $lightness: -10%),
       color: $custom-white
     ),
+    3: (
+      background: color.scale($custom-brand-success, $lightness: -10%),
+      color: $custom-white
+    ),
     4: (
       background: color.scale($custom-brand-primary, $lightness: -10%),
+      color: $custom-white
+    ),
+    5: (
+      background: color.scale($custom-brand-warning, $lightness: -5%),
+      color: color.adjust(color.mix(#000, $custom-brand-warning, 87.5%), $saturation: 22.5%)
+    ),
+    6: (
+      background: color.scale($custom-brand-teal, $lightness: -5%),
+      color: color.adjust(color.mix(#000, $custom-brand-teal, 87.5%), $saturation: 22.5%)
+    ),
+    7: (
+      background: color.scale($custom-brand-info, $lightness: -10%),
       color: $custom-white
     )
   )
@@ -108,9 +129,40 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
 
 // Lighter color for tracker marker ('#') in list view
 
-tr.tracker-2 .id>a::before,
+tr.tracker-1 .id>a::before {
+  color: color.mix($custom-white, color.scale($custom-brand-danger, $lightness: -10%), 50%) !important;
+}
+
+tr.tracker-2 .id>a::before {
+  color: color.mix($custom-white, color.scale($custom-brand-primary, $lightness: -10%), 50%) !important;
+}
+
+tr.tracker-3 .id>a::before {
+  color: color.mix($custom-white, color.scale($custom-brand-success, $lightness: -10%), 50%) !important;
+}
+
 tr.tracker-4 .id>a::before {
-  color: color.mix($custom-white, color.scale($custom-brand-primary, $lightness: -10%), 35%);
+  color: color.mix($custom-white, color.scale($custom-brand-primary, $lightness: -10%), 50%) !important;
+}
+
+tr.tracker-5 .id>a::before {
+  color: color.mix(
+    color.adjust(color.mix(#000, $custom-brand-warning, 87.5%), $saturation: 22.5%),
+    color.scale($custom-brand-warning, $lightness: -10%),
+    50%
+  ) !important;
+}
+
+tr.tracker-6 .id>a::before {
+  color: color.mix(
+    color.adjust(color.mix(#000, $custom-brand-teal, 87.5%), $saturation: 22.5%),
+    color.scale($custom-brand-teal, $lightness: -10%),
+    50%
+  ) !important;
+}
+
+tr.tracker-7 .id>a::before {
+  color: color.mix($custom-white, color.scale($custom-brand-info, $lightness: -10%), 50%) !important;
 }
 
 // Checkbox whitespace in project selection
