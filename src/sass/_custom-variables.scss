@@ -86,6 +86,20 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
       background: color.scale($custom-brand-danger, $lightness: -10%),
       color: $custom-white
     )
+  ),
+
+
+  // Trackers links
+
+  $tracker-custom-colors-map: (
+    2: (
+      background: color.scale($custom-brand-primary, $lightness: -10%),
+      color: $custom-white
+    ),
+    4: (
+      background: color.scale($custom-brand-primary, $lightness: -10%),
+      color: $custom-white
+    )
   )
 );
 
