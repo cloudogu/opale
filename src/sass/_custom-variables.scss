@@ -1,49 +1,93 @@
-// Colors
+@use "sass:color";
+@use "sass:map";
 
-$brand-primary: #1b7daa !default;
-$brand-text: #fff !default;
-$brand-accent: #deddef !default;
-$brand-info: #409ae3 !default;
-$brand-success: #019851 !default;
-$brand-warning: #ed820c !default;
-$brand-danger: #e74c3c !default;
-$state-info: #97cefb !default;
-$state-success: #b5fbb7 !default;
-$state-warning: #ffd699 !default;
-$state-danger: #f7a6a4 !default;
-$blue: $brand-primary !default;
-$indigo: $brand-info !default;
-$purple: $brand-primary !default;
-$pink: #eb5286 !default;
-$red: $brand-danger !default;
-$orange: $brand-warning !default;
-$yellow: #fec900 !default;
-$green: $brand-success !default;
-$teal: #00b3ad !default;
+$custom-brand-primary: #1b7daa;
+$custom-brand-info: #409ae3;
+$custom-brand-success: #019851;
+$custom-brand-warning: #ed820c;
+$custom-brand-danger: #e74c3c;
+$custom-white: #fff;
+$custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
 
-// Font
+@use "variables"
+  with (
+  // Colors
 
-$font-family-sans-serif: "Droid sans", helvetica, arial, freesans, sans-serif !default;
-$font-family-monospace: consolas, "Liberation Mono", menlo, "Courier New", courier, monospace !default;
-$font-family-base: $font-family-sans-serif !default;
-$font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
-$font-size-base: 14px !default;
-$font-size-large: 1.285em !default;
-$font-size-large-px: 16px !default;
+  $brand-primary: $custom-brand-primary,
+  $brand-text: #fff,
+  $brand-accent: #deddef,
+  $brand-info: $custom-brand-info,
+  $brand-success: $custom-brand-success,
+  $brand-warning: $custom-brand-warning,
+  $brand-danger: $custom-brand-danger,
+  $state-info: #97cefb,
+  $state-success: #b5fbb7,
+  $state-warning: #ffd699,
+  $state-danger: #f7a6a4,
+  $blue: $custom-brand-primary,
+  $indigo: $custom-brand-info,
+  $purple: $custom-brand-primary,
+  $pink: #eb5286,
+  $red: $custom-brand-danger,
+  $orange: $custom-brand-warning,
+  $yellow: #fec900,
+  $green: $custom-brand-success,
+  $teal: #00b3ad,
+  $white: $custom-white,
 
-// Logo
 
-$use-logo: true !default;
-$logo-image-width: 40px !default;
-$logo-image-height: 25px !default;
-$logo-space: 20px !default;
-$logo-position-horizontal: 20px !default;
+  // Scaffolding
+
+  $link-color: color.scale($custom-brand-primary, $lightness: -20%),
+  $link-hover-color: $custom-brand-primary,
+
+
+  // Font
+
+  $font-family-sans-serif: $custom-font-family,
+  $font-family-monospace: (consolas, "Liberation Mono", menlo, "Courier New", courier, monospace),
+  $font-family-base: $custom-font-family,
+  $font-weight-normal: normal,
+  $font-weight-bold: bold,
+  $font-size-base: 14px,
+  $font-size-large: 1.285em,
+  $font-size-large-px: 16px,
+
+
+  // Logo
+
+  $use-logo: true,
+  $logo-image-width: 40px,
+  $logo-image-height: 25px,
+  $logo-space: 20px,
+  $logo-position-horizontal: 20px,
+
+
+  // Issue statuses
+
+  $status-custom-colors-map: (
+    status-1: (
+      background: shade($custom-brand-primary, 500),
+      color: $custom-white
+    ),
+    status-2: (
+      background: shade($custom-brand-primary, 500),
+      color: $custom-white
+    ),
+    status-3: (
+      background: shade($custom-brand-primary, 500),
+      color: $custom-white
+    ),
+    status-4: (
+      background: shade($custom-brand-primary, 500),
+      color: $custom-white
+    ),
+    closed: (
+      background: shade($custom-brand-danger, 500),
+      color: $custom-white
+    )
+  )
+);
 
 // style open and closed swimlanes in some Agile plugin views
 // tr.group.swimlane a.issue { color: white; }
-
-// #header>h1 {
-//   padding-left: 65px;
-//   background-size: auto;
-// }
