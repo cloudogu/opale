@@ -108,7 +108,7 @@ $custom-font-family: ("Droid sans", helvetica, arial, freesans, sans-serif);
 
 // Checkbox whitespace in project selection
 
-.drdn-items.selection>span::before {
+.drdn-items.selection>a span::before {
   content: " ";
   display: inline-block;
   width: 1em;
