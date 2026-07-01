@@ -173,3 +173,36 @@ tr.tracker-7 .id>a::before {
   width: 1em;
   margin-right: 4px;
 }
+
+// Spacing between issue id and status
+
+.controller-issues.action-show h2.inline-block {
+  display: inline-flex;
+  margin-right: 5px;
+}
+
+// Padding and position of icons in issue template
+// and view customize plugin
+
+.icon-erase,
+.icon-global_issue_templates,
+.icon-template,
+.icon-hint,
+.issue_template.icon-only.settings,
+.issue_template.icon.plugins,
+.icon-view_customize,
+.icon-view_customize-disable,
+.icon-view_customize-enable {
+  padding-left: 20px !important;
+  background-repeat: no-repeat;
+}
+
+// Position of mail icon in contacts plugin
+
+.controller-issues.action-show .icon-email:not(:has(svg)) {
+  background: none !important;
+}
+
+.controller-issues.action-show .icon-email:not(:has(svg))::before {
+  margin-right: 2px;
+}
