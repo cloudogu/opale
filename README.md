@@ -36,7 +36,7 @@ A Redmine 5.x, 6.x & 7.x theme.
 
 ## Releases
 
-* **Redmine 6.x & 7.x** : use either the latest release ([1.7.1](https://github.com/gagnieray/opale/archive/refs/tags/1.7.1.zip)), or use the `master` branch of this repository.
+* **Redmine 6.x & 7.x** : use either the latest release ([1.7.2](https://github.com/gagnieray/opale/releases/download/1.7.2/opale-1.7.2.zip)), or use the `master` branch of this repository.
 * **Redmine 5.x** : use either the latest 1.5.x release ([1.5.6](https://github.com/gagnieray/opale/archive/refs/tags/1.5.6.zip)), or use the `redmine-5.x` branch of this repository.
 
 ## Troubleshooting
@@ -57,7 +57,9 @@ If you still experience issues with missing assets in the browser, try removing 
 
 This theme also features a new look for [Redmine Backlogs](https://github.com/maedadev/redmine_backlogs) plugin.
 
-To install it, simply copy stylesheets from `opale/plugins/redmine_backlogs` and overwrite files in `{redmine}/plugins/redmine_backlogs/assets/stylesheets`.
+To install it, simply copy the stylesheets from the archive provided in the assets of a release, and overwrite files in `{redmine}/plugins/redmine_backlogs/assets/stylesheets`.
+
+You can also build the stylesheets yourself from the sources using the command : `npm run build:plugins`. The stylesheets will then be available in the `plugins/redmine_backlogs/` directory.
 
 Then restart Redmine.
 
