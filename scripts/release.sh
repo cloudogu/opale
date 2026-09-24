@@ -39,8 +39,8 @@ fi
 
 VERSION="$1"
 
-if [[ ! "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-  echo "Error: the version must follow the X.Y.Z format, for example 8.10.5." >&2
+if [[ ! "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?$ ]]; then
+  echo "Error: the version must follow the X.Y.Z or X.Y.Z-N format, for example 8.10.5 or 8.10.5-1." >&2
   exit 1
 fi
 

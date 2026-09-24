@@ -33,9 +33,9 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?$ ]]; then
             echo "::error::Invalid tag: $VERSION"
-            echo "Expected format: MAJOR.MINOR.PATCH"
+            echo "Expected format: MAJOR.MINOR.PATCH or MAJOR.MINOR.PATCH-N"
             exit 1
           fi
 
